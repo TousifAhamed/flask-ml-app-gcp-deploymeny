@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+<div>
+    <h1>Prediction Results</h1>
+    {% for table in tables %}
+    {{ table|safe }}
+    {% endfor %}
+</div>
+</body>
+</html>

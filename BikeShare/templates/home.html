@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<form action="predict" method="POST">
+    <h2 align="center">Please specify below values</h2>
+    <table align="center" style="margin-top:100px;">
+        <tr>
+            <td>Season</td>
+            <td><input type="text" name="season"/></td>
+        </tr>
+        <tr>
+            <td>Year</td>
+            <td><input type="text" name="yr"/></td>
+        </tr>
+        <tr>
+            <td>Qtrs</td>
+            <td><input type="text" name="qtrs"/></td>
+        </tr>
+        <tr>
+            <td>Month</td>
+            <td><input type="text" name="mnth"/></td>
+        </tr>
+        <tr>
+            <td>Holiday</td>
+            <td><input type="text" name="holiday"/></td>
+        </tr>
+        <tr>
+            <td>Weekday</td>
+            <td><input type="text" name="weekday"/></td>
+        </tr>
+        <tr>
+            <td>Working Day</td>
+            <td><input type="text" name="workingday"/></td>
+        </tr>
+        <tr>
+            <td>Weathersit</td>
+            <td><input type="text" name="weathersit"/></td>
+        </tr>
+        <tr>
+            <td>Temp (in C)</td>
+            <td><input type="text" name="temp"/></td>
+        </tr>
+        <tr>
+            <td>Atemp</td>
+            <td><input type="text" name="atemp"/></td>
+        </tr>
+        <tr>
+            <td>Wind Speed</td>
+            <td><input type="text" name="windspeed"/></td>
+        </tr>
+
+    </table>
+    <p align="center"><input type="submit" value="Predict"/></p>
+</form>
+</body>
+</html>
