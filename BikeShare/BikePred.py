@@ -36,7 +36,7 @@ def model():
     # OSLM = OSlm.LinearRegression()
     # global bbmodel
     bike_model = pikl.load(
-        open(r'C:\Users\TousifAhamed Nadaf\PycharmProjects\tensorEnv\BikeShare\model\bike_share_rf_model.P', 'rb'))
+        open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'model', 'bike_share_rf_model.P'), 'rb'))
     # result = load_model.predict(x)
     # print(result)
 
