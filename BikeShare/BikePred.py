@@ -36,7 +36,7 @@ def model():
     # OSLM = OSlm.LinearRegression()
     # global bbmodel
     bike_model = pikl.load(
-        open(r'C:\Users\TousifAhamed Nadaf\PycharmProjects\tensorEnv\BikeShare\model\bike_share_rf_model.P', 'rb'))
+        open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'model', 'bike_share_rf_model.P'), 'rb'))
     # result = load_model.predict(x)
     # print(result)
 
@@ -85,6 +85,7 @@ if __name__ == "__main__":
     # global OSLM, Error
     global bike_model
     # OSLM, Error = model(1)
-    app.run(host='0.0.0.0', port=port, debug=True)
+    # Debugger off unless explicitly enabled: on 0.0.0.0 it allows remote code execution.
+    app.run(host='0.0.0.0', port=port, debug=os.environ.get('FLASK_DEBUG') == '1')
     #app.run(debug=True)
     # app.run(host='0.0.0.0',port=8080)

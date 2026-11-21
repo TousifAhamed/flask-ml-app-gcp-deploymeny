@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.11-slim
 
 RUN pip install virtualenv
 ENV VIRTUAL_ENV=/venv
@@ -9,10 +9,11 @@ WORKDIR /app
 ADD . /app
 
 # Install dependencies
-RUN pip install -r requirements.txt
+RUN pip install -r requirement.txt
 
 # Expose port
 ENV PORT 8080
 
 # Run the application:
-CMD ["gunicorn", "app:app", "--config=config.py"]
+# gunicorn and app.py/config.py are not part of this project; run the Flask app directly (it reads $PORT)
+CMD ["python", "BikePred.py"]
